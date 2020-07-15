@@ -119,9 +119,9 @@ macos {
         -framework IOKit \
 
     #Create custom target to compile MainMenu.xib, a file required by the application for macos
-    MainMenu.target = ../MainMenu.nib
+    MainMenu.target = MainMenu.nib
     MainMenu.commands = ibtool --compile \"$$PWD/MainMenu.nib\" \"$$PWD/MainMenu.xib\"
-    MainMenu.depends = $$PWD/MainMenu.xib
+    MainMenu.depends = "$$PWD/MainMenu.xib"
 
     QMAKE_EXTRA_TARGETS += MainMenu
 
