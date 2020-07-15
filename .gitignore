@@ -65,3 +65,4 @@ Tools/ShaderBuildCommand/packages/
 # Qt files
 **/Makefile*
 **/*.pro.user*
+**/.qmake.stash
