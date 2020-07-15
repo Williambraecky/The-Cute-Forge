@@ -42,10 +42,10 @@
 Art/
 
 # Binary Shaders
-**/PCDX12/Binary/
-**/PCVulkan/Binary/
-**/OSXMetal/Binary/
-**/PCDX12/Compiled/
+**/D3D12/Binary/
+**/D3D11/Binary/
+**/Vulkan/Binary/
+**/Metal/Binary/
 
 # Automatically Generated Files
 **/Renderer/IRendererDLL.h
@@ -58,3 +58,10 @@ Art/
 # Nuget packages
 Tools/ShaderBuildCommand/packages/
 **/ThirdParty/OpenSource/hlslparser/Ext/ShaderTranslator/packages/
+
+# Macos files
+.DS_STORE
+
+# Qt files
+**/Makefile*
+**/*.pro.user*
