@@ -36,7 +36,7 @@ struct IDxcIncludeHandler;
 /// The CLSID associated with the data and code that will be used to create the object.
 /// </param>
 /// <param name="riid">
-/// A reference to the identifier of the interface to be used to communicate 
+/// A reference to the identifier of the interface to be used to communicate
 /// with the object.
 /// </param>
 /// <param name="ppv">
@@ -66,7 +66,7 @@ typedef HRESULT(__stdcall *DxcCreateInstance2Proc)(
 /// The CLSID associated with the data and code that will be used to create the object.
 /// </param>
 /// <param name="riid">
-/// A reference to the identifier of the interface to be used to communicate 
+/// A reference to the identifier of the interface to be used to communicate
 /// with the object.
 /// </param>
 /// <param name="ppv">
@@ -293,9 +293,14 @@ IDxcAssembler : public IUnknown {
   DECLARE_CROSS_PLATFORM_UUIDOF(IDxcAssembler)
 };
 
-// D3D_SIT_RTACCELERATIONSTRUCTURE is an additional value for D3D_SHADER_INPUT_TYPE,
-// in order to fit it in to ID3D12LibraryReflection.
-static const UINT32 D3D_SIT_RTACCELERATIONSTRUCTURE = 12; // (D3D_SIT_UAV_RWSTRUCTURED_WITH_COUNTER + 1)
+#include <sdkddkver.h>
+#if !defined(NTDDI_WIN10_VB)
+	// D3D_SIT_RTACCELERATIONSTRUCTURE has been added to d3dcommon.h, this is to check for collision
+
+    // D3D_SIT_RTACCELERATIONSTRUCTURE is an additional value for D3D_SHADER_INPUT_TYPE,
+    // in order to fit it in to ID3D12LibraryReflection.
+    static const UINT32 D3D_SIT_RTACCELERATIONSTRUCTURE = 12; // (D3D_SIT_UAV_RWSTRUCTURED_WITH_COUNTER + 1)
+#endif
 
 struct __declspec(uuid("d2c21b26-8350-4bdc-976a-331ce6f4c54c"))
 IDxcContainerReflection : public IUnknown {
@@ -427,7 +432,7 @@ __declspec(selectany) EXTERN const GUID CLSID_DxcOptimizer = {
 __declspec(selectany) EXTERN const GUID CLSID_DxcContainerBuilder = {
   0x94134294,
   0x411f,
-  0x4574,  
+  0x4574,
   { 0xb4, 0xd0, 0x87, 0x41, 0xe2, 0x52, 0x40, 0xd2 }
 };
 #endif
