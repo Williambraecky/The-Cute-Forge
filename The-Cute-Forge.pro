@@ -8,8 +8,10 @@ CONFIG += c++11
 TARGET = TheForge
 
 #
-# TODO: Figure out which files are not required for the forge some libs are most likely mot fully used
+# NOTE: The end goal of this project is to compile only what is necessary for 3d rendering while also keeping everything as is for more user control
 #
+
+# We compile gainput on its own because some flags used to compile The forge are not compatible
 
 GAINPUT_ROOT = $$PWD/gainput
 include($$GAINPUT_ROOT/gainput.pri)
@@ -35,7 +37,13 @@ INCLUDEPATH += \
     Common_3/ThirdParty/OpenSource/ozz-animation/include/ \
 
 
-#Common sources between all OS
+# Common sources between all OS
+
+#
+# TODO: Figure out which files are not required for the forge some libs are most likely mot fully used
+# Most of these will not get through linking if they are not used
+#
+
 SOURCES += \
     #Common_3/OS
     Common_3/OS/Camera/CameraController.cpp \
@@ -143,56 +151,56 @@ SOURCES += \
     Common_3/ThirdParty/OpenSource/rmem/src/rmem_get_module_info.cpp \
     Common_3/ThirdParty/OpenSource/rmem/src/rmem_hook.cpp \
     Common_3/ThirdParty/OpenSource/rmem/src/rmem_lib.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/monotone/soloud_monotone.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/openmpt/soloud_openmpt.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/openmpt/soloud_openmpt_dll.c \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/sfxr/soloud_sfxr.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/speech/darray.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/speech/klatt.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/speech/resonator.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/speech/soloud_speech.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/speech/tts.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/tedsid/sid.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/tedsid/soloud_tedsid.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/tedsid/ted.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/vic/soloud_vic.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/vizsn/soloud_vizsn.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/wav/dr_impl.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/wav/soloud_wav.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/wav/soloud_wavstream.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/wav/stb_vorbis.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/backend/alsa/soloud_alsa.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/backend/coreaudio/soloud_coreaudio.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/backend/opensles/soloud_opensles.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/backend/winmm/soloud_winmm.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/backend/xaudio2/soloud_xaudio2.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_audiosource.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_bus.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_core_3d.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_core_basicops.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_core_faderops.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_core_filterops.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_core_getters.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_core_setters.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_core_voicegroup.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_core_voiceops.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_fader.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_fft.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_fft_lut.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_file.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_filter.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_queue.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_thread.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/filter/soloud_bassboostfilter.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/filter/soloud_biquadresonantfilter.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/filter/soloud_dcremovalfilter.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/filter/soloud_echofilter.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/filter/soloud_fftfilter.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/filter/soloud_flangerfilter.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/filter/soloud_lofifilter.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/filter/soloud_robotizefilter.cpp \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/filter/soloud_waveshaperfilter.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/monotone/soloud_monotone.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/openmpt/soloud_openmpt.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/openmpt/soloud_openmpt_dll.c \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/sfxr/soloud_sfxr.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/speech/darray.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/speech/klatt.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/speech/resonator.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/speech/soloud_speech.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/speech/tts.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/tedsid/sid.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/tedsid/soloud_tedsid.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/tedsid/ted.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/vic/soloud_vic.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/vizsn/soloud_vizsn.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/wav/dr_impl.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/wav/soloud_wav.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/wav/soloud_wavstream.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/wav/stb_vorbis.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/backend/alsa/soloud_alsa.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/backend/coreaudio/soloud_coreaudio.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/backend/opensles/soloud_opensles.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/backend/winmm/soloud_winmm.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/backend/xaudio2/soloud_xaudio2.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_audiosource.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_bus.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_core_3d.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_core_basicops.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_core_faderops.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_core_filterops.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_core_getters.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_core_setters.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_core_voicegroup.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_core_voiceops.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_fader.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_fft.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_fft_lut.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_file.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_filter.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_queue.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_thread.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/filter/soloud_bassboostfilter.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/filter/soloud_biquadresonantfilter.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/filter/soloud_dcremovalfilter.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/filter/soloud_echofilter.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/filter/soloud_fftfilter.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/filter/soloud_flangerfilter.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/filter/soloud_lofifilter.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/filter/soloud_robotizefilter.cpp \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/filter/soloud_waveshaperfilter.cpp \
     Common_3/ThirdParty/OpenSource/zip/zip.cpp \
     Common_3/Tools/AssetPipeline/src/AssetPipeline.cpp \
     Common_3/Tools/AssetPipeline/src/AssetPipelineCmd.cpp \
@@ -483,47 +491,47 @@ HEADERS += \
     Common_3/ThirdParty/OpenSource/rmem/src/rmem_platform.h \
     Common_3/ThirdParty/OpenSource/rmem/src/rmem_utils.h \
     Common_3/ThirdParty/OpenSource/rmem/src/rmem_wrap_win.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_audiosource.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_bassboostfilter.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_biquadresonantfilter.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_bus.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_dcremovalfilter.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_echofilter.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_error.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_fader.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_fft.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_fftfilter.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_file.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_file_hack_off.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_file_hack_on.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_filter.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_flangerfilter.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_internal.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_lofifilter.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_monotone.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_openmpt.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_queue.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_robotizefilter.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_sfxr.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_speech.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_tedsid.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_thread.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_vic.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_vizsn.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_wav.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_waveshaperfilter.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_wavstream.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/speech/darray.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/speech/klatt.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/speech/resonator.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/speech/tts.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/tedsid/sid.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/tedsid/ted.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/wav/dr_flac.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/wav/dr_mp3.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/wav/dr_wav.h \
-    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/wav/stb_vorbis.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_audiosource.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_bassboostfilter.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_biquadresonantfilter.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_bus.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_dcremovalfilter.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_echofilter.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_error.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_fader.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_fft.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_fftfilter.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_file.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_file_hack_off.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_file_hack_on.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_filter.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_flangerfilter.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_internal.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_lofifilter.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_monotone.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_openmpt.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_queue.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_robotizefilter.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_sfxr.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_speech.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_tedsid.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_thread.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_vic.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_vizsn.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_wav.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_waveshaperfilter.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_wavstream.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/speech/darray.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/speech/klatt.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/speech/resonator.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/speech/tts.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/tedsid/sid.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/tedsid/ted.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/wav/dr_flac.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/wav/dr_mp3.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/wav/dr_wav.h \
+#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/wav/stb_vorbis.h \
     Common_3/ThirdParty/OpenSource/tinydds/tinydds.h \
     Common_3/ThirdParty/OpenSource/tinyimageformat/tinyimageformat_apis.h \
     Common_3/ThirdParty/OpenSource/tinyimageformat/tinyimageformat_base.h \
