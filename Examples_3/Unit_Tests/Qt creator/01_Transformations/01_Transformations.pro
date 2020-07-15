@@ -80,6 +80,12 @@ windows {
     LIBS += -L../../../../Common_3/ThirdParty/OpenSource/winpixeventruntime/bin -lWinPixEventRuntime
     LIBS += -lXinput -lgdi32 -lComdlg32
 
+    WINPIX_DLL.commands += $(COPY_FILE) \"..\\..\\..\\..\\Common_3\\ThirdParty\\OpenSource\\winpixeventruntime\\bin\\WinPixEventRuntime.dll\" \"$$DESTDIR\\WinPixEventRuntime.dll\"
+
+    first.depends = $(first) WINPIX_DLL
+    export(first.depends)
+    export(WINPIX_DLL.commands)
+    QMAKE_EXTRA_TARGETS += first WINPIX_DLL
 }
 
 macos {
