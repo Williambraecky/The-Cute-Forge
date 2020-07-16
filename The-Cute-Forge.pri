@@ -21,4 +21,4 @@ LIBS += -L$$THE_FORGE_BUILT -lTheForge -L$$GAINPUT_BUILT -lGainput
 
 
 #Add include paths
-INCLUDEPATH += Common_3/ Middleware_3/
+INCLUDEPATH += $$THE_FORGE_ROOT/Common_3/ $$THE_FORGE_ROOT/Middleware_3/
