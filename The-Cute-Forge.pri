@@ -3,6 +3,7 @@ TheForgeLib.commands = cd $$THE_FORGE_ROOT && qmake The-Cute-Forge.pro && make -
 TheForgeLib.depends = $$THE_FORGE_ROOT/Makefile
 QMAKE_EXTRA_TARGETS += TheForgeLib
 
+#Windows and other systems compile differently when not shadow building
 windows {
     CONFIG(debug, debug|release) {
         THE_FORGE_BUILT = $$THE_FORGE_ROOT/debug
@@ -17,3 +18,7 @@ windows {
 }
 
 LIBS += -L$$THE_FORGE_BUILT -lTheForge -L$$GAINPUT_BUILT -lGainput
+
+
+#Add include paths
+INCLUDEPATH += Common_3/ Middleware_3/
