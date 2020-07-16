@@ -90,11 +90,11 @@ SOURCES += \
     Common_3/ThirdParty/OpenSource/SPIRV_Cross/spirv_msl.cpp \
     Common_3/ThirdParty/OpenSource/SPIRV_Cross/spirv_parser.cpp \
     Common_3/ThirdParty/OpenSource/SPIRV_Cross/spirv_reflect.cpp \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MicroWindows.cpp \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Source/MTDefaultAppInterop.cpp \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Source/MTFiberContext.cpp \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Source/MTScheduler.cpp \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Source/MTThreadContext.cpp \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MicroWindows.cpp \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Source/MTDefaultAppInterop.cpp \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Source/MTFiberContext.cpp \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Source/MTScheduler.cpp \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Source/MTThreadContext.cpp \
     Common_3/ThirdParty/OpenSource/TinyEXR/tinyexr.cpp \
     Common_3/ThirdParty/OpenSource/TinyXML2/tinyxml2.cpp \
     Common_3/ThirdParty/OpenSource/TressFX/TressFXAsset.cpp \
@@ -363,57 +363,57 @@ HEADERS += \
     Common_3/ThirdParty/OpenSource/SPIRV_Cross/spirv_msl.hpp \
     Common_3/ThirdParty/OpenSource/SPIRV_Cross/spirv_parser.hpp \
     Common_3/ThirdParty/OpenSource/SPIRV_Cross/spirv_reflect.hpp \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTAppInterop.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTArrayView.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTAtomic.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTColorTable.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTConcurrentRingBuffer.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTConfig.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTDebug.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTFiberContext.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTFiberContext.inl \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTGroupedTask.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTPlatform.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTProfilerEventListener.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTQueueMPMC.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTScheduler.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTScheduler.inl \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTStackRequirements.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTStaticVector.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTTaskBucket.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTTaskDesc.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTTaskGroup.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTTaskPool.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTTaskQueue.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTThreadContext.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTTools.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTTypes.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Common/MTAtomic.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Common/MTSpinWait.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Common/MTThread.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Posix/MTAtomic.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Posix/MTCommon.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Posix/MTEvent.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Posix/MTFiber.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Posix/MTMemory.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Posix/MTMutex.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Posix/MTThread.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Posix/MTUtils.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTAtomic.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTCommon.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTEvent.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTEventKernel.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTEventUser.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTFiber.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTFiberDefault.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTFiberOptimized.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTMemory.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTMutex.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTThread.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTUtils.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MicroWindows.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Scopes/MTScopes.h \
-    Common_3/ThirdParty/OpenSource/TaskScheduler/ThirdParty/Boost.Context/fcontext.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTAppInterop.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTArrayView.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTAtomic.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTColorTable.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTConcurrentRingBuffer.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTConfig.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTDebug.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTFiberContext.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTFiberContext.inl \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTGroupedTask.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTPlatform.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTProfilerEventListener.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTQueueMPMC.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTScheduler.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTScheduler.inl \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTStackRequirements.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTStaticVector.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTTaskBucket.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTTaskDesc.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTTaskGroup.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTTaskPool.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTTaskQueue.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTThreadContext.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTTools.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTTypes.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Common/MTAtomic.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Common/MTSpinWait.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Common/MTThread.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Posix/MTAtomic.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Posix/MTCommon.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Posix/MTEvent.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Posix/MTFiber.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Posix/MTMemory.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Posix/MTMutex.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Posix/MTThread.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Posix/MTUtils.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTAtomic.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTCommon.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTEvent.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTEventKernel.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTEventUser.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTFiber.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTFiberDefault.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTFiberOptimized.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTMemory.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTMutex.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTThread.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTUtils.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MicroWindows.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Scopes/MTScopes.h \
+#    Common_3/ThirdParty/OpenSource/TaskScheduler/ThirdParty/Boost.Context/fcontext.h \
     Common_3/ThirdParty/OpenSource/TinyEXR/tinyexr.h \
     Common_3/ThirdParty/OpenSource/TinyXML2/tinyxml2.h \
     Common_3/ThirdParty/OpenSource/TressFX/TressFXAsset.h \
