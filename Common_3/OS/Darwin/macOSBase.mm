@@ -175,7 +175,11 @@ void openWindow(const char* app_name, WindowsDesc* winDesc, id<MTLDevice> device
         [Window center];
 }
 
-void closeWindow(const WindowsDesc* winDesc) {}
+void closeWindow(const WindowsDesc* winDesc)
+{
+    NSWindow* Window = (__bridge NSWindow*)winDesc->handle.window;
+    [Window close];
+}
 
 void setWindowRect(WindowsDesc* winDesc, const RectDesc& rect)
 {
