@@ -56,7 +56,6 @@ SOURCES += \
     Common_3/OS/FileSystem/SystemRun.cpp \
     Common_3/OS/FileSystem/ZipFileStream.cpp \
     Common_3/OS/FileSystem/ZipFileSystem.cpp \
-    Common_3/OS/Image/Image.cpp \
     Common_3/OS/Input/InputSystem.cpp \
     Common_3/OS/Logging/Log.cpp \
     Common_3/OS/MemoryTracking/MemoryTracking.cpp \
