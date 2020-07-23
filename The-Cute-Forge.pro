@@ -89,58 +89,9 @@ SOURCES += \
     Common_3/ThirdParty/OpenSource/SPIRV_Cross/spirv_msl.cpp \
     Common_3/ThirdParty/OpenSource/SPIRV_Cross/spirv_parser.cpp \
     Common_3/ThirdParty/OpenSource/SPIRV_Cross/spirv_reflect.cpp \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MicroWindows.cpp \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Source/MTDefaultAppInterop.cpp \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Source/MTFiberContext.cpp \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Source/MTScheduler.cpp \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Source/MTThreadContext.cpp \
     Common_3/ThirdParty/OpenSource/TinyEXR/tinyexr.cpp \
     Common_3/ThirdParty/OpenSource/TinyXML2/tinyxml2.cpp \
     Common_3/ThirdParty/OpenSource/TressFX/TressFXAsset.cpp \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/offline/additive_animation_builder.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/offline/animation_builder.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/offline/animation_optimizer.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/offline/fbx/fbx.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/offline/fbx/fbx2ozz.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/offline/fbx/fbx2ozz_anim.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/offline/fbx/fbx2ozz_skel.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/offline/fbx/fbx_animation.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/offline/fbx/fbx_skeleton.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/offline/raw_animation.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/offline/raw_animation_archive.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/offline/raw_animation_utils.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/offline/raw_skeleton.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/offline/raw_skeleton_archive.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/offline/raw_track.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/offline/skeleton_builder.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/offline/tools/dump2ozz.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/offline/tools/import2ozz.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/offline/tools/import2ozz_anim.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/offline/tools/import2ozz_config.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/offline/tools/import2ozz_skel.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/offline/track_builder.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/offline/track_optimizer.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/runtime/animation.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/runtime/blending_job.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/runtime/ik_aim_job.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/runtime/ik_two_bone_job.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/runtime/local_to_model_job.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/runtime/sampling_job.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/runtime/skeleton.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/runtime/skeleton_utils.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/runtime/track.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/runtime/track_sampling_job.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/runtime/track_triggering_job.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/base/containers/string_archive.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/base/io/archive.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/base/io/stream.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/base/maths/math_archive.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/base/maths/simd_math_archive.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/base/maths/soa_math_archive.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/base/memory/allocator.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/base/platform.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/geometry/runtime/skinning_job.cc \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/options/options.cc \
     Common_3/ThirdParty/OpenSource/basis_universal/transcoder/basisu_transcoder.cpp \
     Common_3/ThirdParty/OpenSource/imgui/imgui.cpp \
     Common_3/ThirdParty/OpenSource/imgui/imgui_demo.cpp \
@@ -150,56 +101,6 @@ SOURCES += \
     Common_3/ThirdParty/OpenSource/rmem/src/rmem_get_module_info.cpp \
     Common_3/ThirdParty/OpenSource/rmem/src/rmem_hook.cpp \
     Common_3/ThirdParty/OpenSource/rmem/src/rmem_lib.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/monotone/soloud_monotone.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/openmpt/soloud_openmpt.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/openmpt/soloud_openmpt_dll.c \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/sfxr/soloud_sfxr.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/speech/darray.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/speech/klatt.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/speech/resonator.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/speech/soloud_speech.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/speech/tts.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/tedsid/sid.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/tedsid/soloud_tedsid.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/tedsid/ted.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/vic/soloud_vic.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/vizsn/soloud_vizsn.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/wav/dr_impl.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/wav/soloud_wav.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/wav/soloud_wavstream.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/wav/stb_vorbis.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/backend/alsa/soloud_alsa.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/backend/coreaudio/soloud_coreaudio.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/backend/opensles/soloud_opensles.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/backend/winmm/soloud_winmm.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/backend/xaudio2/soloud_xaudio2.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_audiosource.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_bus.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_core_3d.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_core_basicops.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_core_faderops.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_core_filterops.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_core_getters.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_core_setters.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_core_voicegroup.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_core_voiceops.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_fader.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_fft.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_fft_lut.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_file.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_filter.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_queue.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/core/soloud_thread.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/filter/soloud_bassboostfilter.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/filter/soloud_biquadresonantfilter.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/filter/soloud_dcremovalfilter.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/filter/soloud_echofilter.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/filter/soloud_fftfilter.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/filter/soloud_flangerfilter.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/filter/soloud_lofifilter.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/filter/soloud_robotizefilter.cpp \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/filter/soloud_waveshaperfilter.cpp \
     Common_3/ThirdParty/OpenSource/zip/zip.cpp \
     Common_3/Tools/AssetPipeline/src/AssetPipeline.cpp \
     Common_3/Tools/AssetPipeline/src/AssetPipelineCmd.cpp \
@@ -362,114 +263,11 @@ HEADERS += \
     Common_3/ThirdParty/OpenSource/SPIRV_Cross/spirv_msl.hpp \
     Common_3/ThirdParty/OpenSource/SPIRV_Cross/spirv_parser.hpp \
     Common_3/ThirdParty/OpenSource/SPIRV_Cross/spirv_reflect.hpp \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTAppInterop.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTArrayView.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTAtomic.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTColorTable.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTConcurrentRingBuffer.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTConfig.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTDebug.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTFiberContext.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTFiberContext.inl \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTGroupedTask.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTPlatform.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTProfilerEventListener.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTQueueMPMC.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTScheduler.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTScheduler.inl \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTStackRequirements.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTStaticVector.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTTaskBucket.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTTaskDesc.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTTaskGroup.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTTaskPool.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTTaskQueue.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTThreadContext.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTTools.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/MTTypes.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Common/MTAtomic.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Common/MTSpinWait.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Common/MTThread.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Posix/MTAtomic.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Posix/MTCommon.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Posix/MTEvent.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Posix/MTFiber.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Posix/MTMemory.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Posix/MTMutex.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Posix/MTThread.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Posix/MTUtils.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTAtomic.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTCommon.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTEvent.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTEventKernel.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTEventUser.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTFiber.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTFiberDefault.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTFiberOptimized.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTMemory.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTMutex.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTThread.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MTUtils.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Platform/Windows/MicroWindows.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/Scheduler/Include/Scopes/MTScopes.h \
-#    Common_3/ThirdParty/OpenSource/TaskScheduler/ThirdParty/Boost.Context/fcontext.h \
     Common_3/ThirdParty/OpenSource/TinyEXR/tinyexr.h \
     Common_3/ThirdParty/OpenSource/TinyXML2/tinyxml2.h \
     Common_3/ThirdParty/OpenSource/TressFX/TressFXAsset.h \
     Common_3/ThirdParty/OpenSource/TressFX/TressFXFileFormat.h \
     Common_3/ThirdParty/OpenSource/VulkanMemoryAllocator/VulkanMemoryAllocator.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/animation/offline/additive_animation_builder.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/animation/offline/animation_builder.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/animation/offline/animation_optimizer.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/animation/offline/fbx/fbx.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/animation/offline/fbx/fbx_animation.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/animation/offline/fbx/fbx_skeleton.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/animation/offline/raw_animation.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/animation/offline/raw_animation_utils.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/animation/offline/raw_skeleton.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/animation/offline/raw_track.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/animation/offline/skeleton_builder.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/animation/offline/tools/import2ozz.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/animation/offline/track_builder.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/animation/offline/track_optimizer.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/animation/runtime/animation.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/animation/runtime/blending_job.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/animation/runtime/ik_aim_job.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/animation/runtime/ik_two_bone_job.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/animation/runtime/local_to_model_job.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/animation/runtime/sampling_job.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/animation/runtime/skeleton.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/animation/runtime/skeleton_utils.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/animation/runtime/track.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/animation/runtime/track_sampling_job.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/animation/runtime/track_triggering_job.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/animation/runtime/track_triggering_job_stl.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/base/containers/map.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/base/containers/set.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/base/containers/string.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/base/containers/string_archive.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/base/containers/vector.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/base/containers/vector_archive.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/base/endianness.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/base/gtest_helper.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/base/io/archive.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/base/io/archive_traits.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/base/io/stream.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/base/maths/gtest_math_helper.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/base/maths/math_archive.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/base/maths/math_constant.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/base/maths/math_ex.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/base/maths/simd_math_archive.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/base/maths/soa_math_archive.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/base/memory/allocator.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/base/platform.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/geometry/runtime/skinning_job.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/include/ozz/options/options.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/offline/fbx/fbx2ozz.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/offline/tools/import2ozz_anim.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/offline/tools/import2ozz_config.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/offline/tools/import2ozz_skel.h \
-#    Common_3/ThirdParty/OpenSource/ozz-animation/src/animation/runtime/animation_keyframe.h \
     Common_3/ThirdParty/OpenSource/basis_universal/transcoder/basisu.h \
     Common_3/ThirdParty/OpenSource/basis_universal/transcoder/basisu_file_headers.h \
     Common_3/ThirdParty/OpenSource/basis_universal/transcoder/basisu_global_selector_cb.h \
@@ -490,47 +288,6 @@ HEADERS += \
     Common_3/ThirdParty/OpenSource/rmem/src/rmem_platform.h \
     Common_3/ThirdParty/OpenSource/rmem/src/rmem_utils.h \
     Common_3/ThirdParty/OpenSource/rmem/src/rmem_wrap_win.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_audiosource.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_bassboostfilter.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_biquadresonantfilter.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_bus.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_dcremovalfilter.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_echofilter.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_error.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_fader.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_fft.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_fftfilter.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_file.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_file_hack_off.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_file_hack_on.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_filter.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_flangerfilter.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_internal.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_lofifilter.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_monotone.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_openmpt.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_queue.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_robotizefilter.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_sfxr.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_speech.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_tedsid.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_thread.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_vic.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_vizsn.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_wav.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_waveshaperfilter.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/include/soloud_wavstream.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/speech/darray.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/speech/klatt.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/speech/resonator.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/speech/tts.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/tedsid/sid.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/tedsid/ted.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/wav/dr_flac.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/wav/dr_mp3.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/wav/dr_wav.h \
-#    Common_3/ThirdParty/OpenSource/soloud20181119/src/audiosource/wav/stb_vorbis.h \
     Common_3/ThirdParty/OpenSource/tinydds/tinydds.h \
     Common_3/ThirdParty/OpenSource/tinyimageformat/tinyimageformat_apis.h \
     Common_3/ThirdParty/OpenSource/tinyimageformat/tinyimageformat_base.h \
