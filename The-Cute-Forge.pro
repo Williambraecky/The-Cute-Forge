@@ -5,7 +5,22 @@ CONFIG += staticlib
 
 CONFIG += c++11
 
+# Ignore annoying warnings
+mac {
+    QMAKE_CXXFLAGS_WARN_ON += -Wno-ignored-qualifiers -Wno-unused-parameter
+}
+
 TARGET = TheForge
+
+THE_FORGE_ROOT = $$PWD
+
+release: DESTDIR = release
+debug:   DESTDIR = debug
+
+OBJECTS_DIR = $$DESTDIR/obj
+MOC_DIR = $$DESTDIR/obj
+RCC_DIR = $$DESTDIR/obj
+UI_DIR = $$DESTDIR/obj
 
 #
 # NOTE: The end goal of this project is to compile only what is necessary for 3d rendering while also keeping everything as is for more user control
@@ -13,8 +28,7 @@ TARGET = TheForge
 
 # We compile gainput on its own because some flags used to compile The forge are not compatible
 
-GAINPUT_ROOT = $$PWD/gainput
-include($$GAINPUT_ROOT/gainput.pri)
+include(Gainput.pri)
 
 # We will use directx12 by default (on windows), uncomment to change
 CONFIG += directx12
@@ -389,10 +403,11 @@ windows {
 
 #Apple (Mac and IOS) specific rules
 darwin {
+    DEFINES += METAL
 
     # We need to force compile some cpp files as objectivecpp files
-    QMAKE_CXXFLAGS += -ObjC++ -fobjc-arc -D METAL -Wno-c++14-extensions -Wno-ignored-qualifiers
-    QMAKE_CFLAGS += -fobjc-arc -D METAL
+    QMAKE_CXXFLAGS += -ObjC++ -fobjc-arc
+    QMAKE_CFLAGS += -fobjc-arc
 
     SOURCES += \
         Common_3/OS/Darwin/CocoaFileSystem.mm \

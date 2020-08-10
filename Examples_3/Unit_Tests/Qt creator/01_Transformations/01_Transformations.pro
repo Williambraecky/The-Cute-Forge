@@ -2,18 +2,25 @@
 # Please note this was only tested on mac and windows, you are welcome to modify it to work on other platforms aswell
 #
 
-CONFIG += c++11
+CONFIG += c++14
 
+# Ignore annoying warnings
+mac {
+    QMAKE_CXXFLAGS += -Wno-ignored-qualifiers -Wno-unused-parameter
+    QMAKE_CXXFLAGS_WARN_ON += -Wno-ignored-qualifiers -Wno-unused-parameter
+}
 
-# The example uses relative path like such: ../../../src/01_Transformations/foo
-# This is made to be built without shadow building
+THE_FORGE_ROOT = $$PWD/../../../..
+include($$THE_FORGE_ROOT/The-Cute-Forge.pri)
+
+# Force build folder to be in root folder/Build/Gainput/[debug|release]
 release: DESTDIR = release
 debug:   DESTDIR = debug
 
-OBJECTS_DIR = $$DESTDIR/.obj
-MOC_DIR = $$DESTDIR/.moc
-RCC_DIR = $$DESTDIR/.qrc
-UI_DIR = $$DESTDIR/.ui
+OBJECTS_DIR = $$DESTDIR/obj
+MOC_DIR = $$DESTDIR/obj
+RCC_DIR = $$DESTDIR/obj
+UI_DIR = $$DESTDIR/obj
 
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
@@ -30,12 +37,6 @@ UI_DIR = $$DESTDIR/.ui
 
 # Add the forge and gainput as library
 # NOTE: This setup is made to compile without using shadow build, it will not find the libraries when using shadow build
-
-# Modify if needed
-THE_FORGE_ROOT = $$PWD/../../../..
-# Modify if needed
-GAINPUT_ROOT = $$THE_FORGE_ROOT/gainput
-include($$THE_FORGE_ROOT/The-Cute-Forge.pri)
 
 SOURCES += \
     ../../src/01_Transformations/01_Transformations.cpp \
@@ -125,7 +126,10 @@ macos {
         -framework IOKit \
 
     #Create custom target to compile MainMenu.xib, a file required by the application for macos
-    MainMenu.target = MainMenu.nib
+    # Directly generate the nib file (on qmake call) so it exists for Base_RESOURCES.files
+    system("ibtool --compile \"$$PWD/MainMenu.nib\" \"$$PWD/MainMenu.xib\"")
+    # Then rebuild if xib file change (on make call)
+    MainMenu.target = $$PWD/MainMenu.nib
     MainMenu.commands = ibtool --compile \"$$PWD/MainMenu.nib\" \"$$PWD/MainMenu.xib\"
     MainMenu.depends = "$$PWD/MainMenu.xib"
 
