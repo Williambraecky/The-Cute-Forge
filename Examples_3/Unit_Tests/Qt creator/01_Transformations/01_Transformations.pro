@@ -78,7 +78,10 @@ windows {
     #make sure we give the right path to the forge.lib (this is done in the cute forge .pri)
     #we need to link with winpixeventruntime we also need to move it to the executable's directory afterwards
     LIBS += -L../../../../Common_3/ThirdParty/OpenSource/winpixeventruntime/bin -lWinPixEventRuntime
-    LIBS += -lXinput -lgdi32 -lComdlg32
+    LIBS += -L../../../../Common_3/ThirdParty/OpenSource/ags/ags_lib/lib/ -lamd_ags_x64
+    LIBS += -L../../../../Common_3/ThirdParty/OpenSource/nvapi/amd64 -lnvapi64
+    LIBS += -L../../../../Common_3/ThirdParty/OpenSource/DirectXShaderCompiler/lib/x64 -ldxcompiler
+    LIBS += -lXinput -lgdi32 -lComdlg32 -lOle32
 
     WINPIX_DLL.commands += $(COPY_FILE) \"..\\..\\..\\..\\Common_3\\ThirdParty\\OpenSource\\winpixeventruntime\\bin\\WinPixEventRuntime.dll\" \"$$DESTDIR\\WinPixEventRuntime.dll\"
 
