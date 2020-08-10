@@ -69,6 +69,28 @@ DISTFILES += \
     ../../src/01_Transformations/Shaders/Metal/skybox.frag.metal \
     ../../src/01_Transformations/Shaders/Metal/skybox.vert.metal \
 
+
+defineTest(copyToDestDir) {
+    files = $$1
+    dir = $$2
+    # replace slashes in destination path for Windows
+    win32:dir ~= s,/,\\,g
+
+    !exists($$dir){
+        win32:QMAKE_POST_LINK += if not exist $$shell_quote($$dir) $$QMAKE_MKDIR $$shell_quote($$dir) $$escape_expand(\\n\\t)
+        !win32:QMAKE_POST_LINK += $$QMAKE_MKDIR $$shell_quote($$dir) $$escape_expand(\\n\\t)
+    }
+
+    for(file, files) {
+        # replace slashes in source path for Windows
+        win32:file ~= s,/,\\,g
+
+        QMAKE_POST_LINK += $$QMAKE_COPY_DIR $$shell_quote($$file) $$shell_quote($$dir) $$escape_expand(\\n\\t)
+    }
+
+    export(QMAKE_POST_LINK)
+}
+
 windows {
 
     #TODO: Make D3D11 config
@@ -83,12 +105,47 @@ windows {
     LIBS += -L../../../../Common_3/ThirdParty/OpenSource/DirectXShaderCompiler/lib/x64 -ldxcompiler
     LIBS += -lXinput -lgdi32 -lComdlg32 -lOle32
 
-    WINPIX_DLL.commands += $(COPY_FILE) \"..\\..\\..\\..\\Common_3\\ThirdParty\\OpenSource\\winpixeventruntime\\bin\\WinPixEventRuntime.dll\" \"$$DESTDIR\\WinPixEventRuntime.dll\"
+    copyToDestDir(../../../../Common_3/ThirdParty/OpenSource/winpixeventruntime/bin/WinPixEventRuntime.dll \
+                  ../../../../Common_3/ThirdParty/OpenSource/ags/ags_lib/lib/amd_ags_x64.dll \
+                  ../../../../Common_3/ThirdParty/OpenSource/DirectXShaderCompiler/bin/x64/dxcompiler.dll \
+                  ../../../../Common_3/ThirdParty/OpenSource/DirectXShaderCompiler/bin/x64/dxil.dll, $$DESTDIR)
 
-    first.depends = $(first) WINPIX_DLL
-    export(first.depends)
-    export(WINPIX_DLL.commands)
-    QMAKE_EXTRA_TARGETS += first WINPIX_DLL
+
+    Shaders += \
+        ../../src/01_Transformations/Shaders/D3D12/basic.frag \
+        ../../src/01_Transformations/Shaders/D3D12/basic.vert \
+        ../../src/01_Transformations/Shaders/D3D12/skybox.frag \
+        ../../src/01_Transformations/Shaders/D3D12/skybox.vert \
+        $$THE_FORGE_ROOT/Middleware_3/Text/Shaders/D3D12/fontstash.frag \
+        $$THE_FORGE_ROOT/Middleware_3/Text/Shaders/D3D12/fontstash2D.vert \
+        $$THE_FORGE_ROOT/Middleware_3/Text/Shaders/D3D12/fontstash3D.vert \
+        $$THE_FORGE_ROOT/Middleware_3/UI/Shaders/D3D12/imgui.frag \
+        $$THE_FORGE_ROOT/Middleware_3/UI/Shaders/D3D12/imgui.vert \
+        $$THE_FORGE_ROOT/Middleware_3/UI/Shaders/D3D12/textured_mesh.frag \
+        $$THE_FORGE_ROOT/Middleware_3/UI/Shaders/D3D12/textured_mesh.vert \
+
+    copyToDestDir($$Shaders, $$DESTDIR/Shaders)
+
+    GPUCfg += \
+        ../../src/01_Transformations/GPUCfg/gpu.cfg \
+
+    copyToDestDir($$GPUCfg, $$DESTDIR/GPUCfg)
+
+    Fonts += \
+        ../../UnitTestResources/Fonts \
+
+    copyToDestDir($$Fonts, $$DESTDIR/Fonts)
+
+    Textures += \
+        ../../UnitTestResources/Textures/Skybox_right1.dds \
+        ../../UnitTestResources/Textures/Skybox_left2.dds \
+        ../../UnitTestResources/Textures/Skybox_top3.dds \
+        ../../UnitTestResources/Textures/Skybox_bottom4.dds \
+        ../../UnitTestResources/Textures/Skybox_front5.dds \
+        ../../UnitTestResources/Textures/Skybox_back6.dds \
+
+    copyToDestDir($$Textures, $$DESTDIR/Textures)
+
 }
 
 macos {
