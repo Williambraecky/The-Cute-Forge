@@ -6,6 +6,7 @@
 *.lo
 *.o
 *.obj
+*.nib
 
 # Precompiled Headers
 *.gch
@@ -66,3 +67,4 @@ Tools/ShaderBuildCommand/packages/
 **/Makefile*
 **/*.pro.user*
 **/.qmake.stash
+**/build-*
