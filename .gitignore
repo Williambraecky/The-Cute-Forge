@@ -47,6 +47,8 @@ Art/
 **/Vulkan/Binary/
 **/Metal/Binary/
 
+*.bin
+
 # Automatically Generated Files
 **/Renderer/IRendererDLL.h
 **/Renderer/Renderer.cpp
@@ -61,6 +63,7 @@ Tools/ShaderBuildCommand/packages/
 
 # Macos files
 .DS_STORE
+*.nib
 
 # Qt files
 **/Makefile*
