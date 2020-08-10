@@ -47,14 +47,14 @@ INCLUDEPATH += \
 SOURCES += \
     #Common_3/OS
     Common_3/OS/Camera/CameraController.cpp \
-    Common_3/OS/Core/FileSystem.cpp \
     Common_3/OS/Core/ThreadSystem.cpp \
     Common_3/OS/Core/Timer.cpp \
-    Common_3/OS/FileSystem/FileSystemInternal.cpp \
-    Common_3/OS/FileSystem/MemoryStream.cpp \
-    Common_3/OS/FileSystem/SystemFileStream.cpp \
+    Common_3/OS/FileSystem/FileSystem.cpp \
+#    Common_3/OS/FileSystem/FileSystemInternal.cpp \
+#    Common_3/OS/FileSystem/MemoryStream.cpp \
+#    Common_3/OS/FileSystem/SystemFileStream.cpp \
     Common_3/OS/FileSystem/SystemRun.cpp \
-    Common_3/OS/FileSystem/ZipFileStream.cpp \
+#    Common_3/OS/FileSystem/ZipFileStream.cpp \
     Common_3/OS/FileSystem/ZipFileSystem.cpp \
     Common_3/OS/Input/InputSystem.cpp \
     Common_3/OS/Logging/Log.cpp \
@@ -90,7 +90,7 @@ SOURCES += \
     Common_3/ThirdParty/OpenSource/SPIRV_Cross/spirv_parser.cpp \
     Common_3/ThirdParty/OpenSource/SPIRV_Cross/spirv_reflect.cpp \
     Common_3/ThirdParty/OpenSource/TinyEXR/tinyexr.cpp \
-    Common_3/ThirdParty/OpenSource/TinyXML2/tinyxml2.cpp \
+#    Common_3/ThirdParty/OpenSource/TinyXML2/tinyxml2.cpp \
     Common_3/ThirdParty/OpenSource/TressFX/TressFXAsset.cpp \
     Common_3/ThirdParty/OpenSource/basis_universal/transcoder/basisu_transcoder.cpp \
     Common_3/ThirdParty/OpenSource/imgui/imgui.cpp \
@@ -406,7 +406,7 @@ darwin {
         SOURCES += \
             #Common_3/OS/Darwin/macOSAppDelegate.m \
             Common_3/OS/Darwin/macOSBase.mm \
-            Common_3/OS/Darwin/macOSFileSystem.mm \
+#            Common_3/OS/Darwin/macOSFileSystem.mm \
 
         HEADERS += \
             #Common_3/OS/Darwin/macOSAppDelegate.h \
@@ -415,9 +415,9 @@ darwin {
 
     ios {
         SOURCES += \
-            Common_3/OS/Darwin/iOSAppDelegate.m \
+#            Common_3/OS/Darwin/iOSAppDelegate.m \
             Common_3/OS/Darwin/iOSBase.mm \
-            Common_3/OS/Darwin/iOSFileSystem.mm \
+#            Common_3/OS/Darwin/iOSFileSystem.mm \
 
         HEADERS += \
             Common_3/OS/Darwin/iOSAppDelegate.h \

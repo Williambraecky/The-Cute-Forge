@@ -138,6 +138,18 @@ macos {
     Base_RESOURCES.path = Contents/Resources/Base.lproj
     QMAKE_BUNDLE_DATA += Base_RESOURCES
 
-    #Necessary??? the file should probably be remade to use qt variables instead of xcode ones
-    #QMAKE_INFO_PLIST = "../macOS Xcode/01_Transformations/01_Transformations/Info.plist"
+    Shaders.files += \
+        ../../src/01_Transformations/Shaders/Metal/basic.frag.metal \
+        ../../src/01_Transformations/Shaders/Metal/basic.vert.metal \
+        ../../src/01_Transformations/Shaders/Metal/skybox.frag.metal \
+        ../../src/01_Transformations/Shaders/Metal/skybox.vert.metal \
+
+    Shaders.path = Contents/Resources/Shaders
+    QMAKE_BUNDLE_DATA += Shaders
+
+    GPUCfg.files += \
+        ../../src/01_Transformations/GPUCfg/gpu.cfg \
+
+    GPUCfg.path = Contents/Resources/GPUCfg
+    QMAKE_BUNDLE_DATA += GPUCfg
 }
