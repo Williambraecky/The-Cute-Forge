@@ -146,6 +146,13 @@ macos {
         ../../src/01_Transformations/Shaders/Metal/basic.vert.metal \
         ../../src/01_Transformations/Shaders/Metal/skybox.frag.metal \
         ../../src/01_Transformations/Shaders/Metal/skybox.vert.metal \
+        $$THE_FORGE_ROOT/Middleware_3/Text/Shaders/Metal/fontstash.frag.metal \
+        $$THE_FORGE_ROOT/Middleware_3/Text/Shaders/Metal/fontstash2D.vert.metal \
+        $$THE_FORGE_ROOT/Middleware_3/Text/Shaders/Metal/fontstash3D.vert.metal \
+        $$THE_FORGE_ROOT/Middleware_3/UI/Shaders/Metal/imgui.frag.metal \
+        $$THE_FORGE_ROOT/Middleware_3/UI/Shaders/Metal/imgui.vert.metal \
+        $$THE_FORGE_ROOT/Middleware_3/UI/Shaders/Metal/textured_mesh.frag.metal \
+        $$THE_FORGE_ROOT/Middleware_3/UI/Shaders/Metal/textured_mesh.vert.metal \
 
     Shaders.path = Contents/Resources/Shaders
     QMAKE_BUNDLE_DATA += Shaders
@@ -155,4 +162,22 @@ macos {
 
     GPUCfg.path = Contents/Resources/GPUCfg
     QMAKE_BUNDLE_DATA += GPUCfg
+
+    Fonts.files += \
+        ../../UnitTestResources/Fonts \
+
+    Fonts.path = Contents/Resources/
+    QMAKE_BUNDLE_DATA += Fonts
+
+    Textures.files += \
+        ../../UnitTestResources/Textures/Skybox_right1.dds \
+        ../../UnitTestResources/Textures/Skybox_left2.dds \
+        ../../UnitTestResources/Textures/Skybox_top3.dds \
+        ../../UnitTestResources/Textures/Skybox_bottom4.dds \
+        ../../UnitTestResources/Textures/Skybox_front5.dds \
+        ../../UnitTestResources/Textures/Skybox_back6.dds \
+
+    Textures.path = Contents/Resources/Textures
+    QMAKE_BUNDLE_DATA += Textures
+
 }
