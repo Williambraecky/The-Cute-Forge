@@ -14,8 +14,11 @@ TARGET = TheForge
 
 THE_FORGE_ROOT = $$PWD
 
-release: DESTDIR = release
-debug:   DESTDIR = debug
+CONFIG(debug, debug|release) {
+    DESTDIR = debug
+} else {
+    DESTDIR = release
+}
 
 OBJECTS_DIR = $$DESTDIR/obj
 MOC_DIR = $$DESTDIR/obj
