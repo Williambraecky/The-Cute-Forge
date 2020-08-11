@@ -17,12 +17,16 @@ CONFIG(debug, debug|release) {
     GAINPUT_BUILT = $$GAINPUT_BUILD_FOLDER/release
 }
 
-Gainput.target = $$GAINPUT_BUILT/libGainput.a
+unix:Gainput.target = $$GAINPUT_BUILT/libGainput.a
+windows:Gainput.target = $$GAINPUT_BUILT/Gainput.lib
 CONFIG(debug, debug|release) {
-    Gainput.commands = echo "Building Gainput Library..." && cd \"$$GAINPUT_BUILD_FOLDER\" && make debug -j8 && echo "Done\n"
+    unix:Gainput.commands = echo "Building Gainput Library..." && cd \"$$GAINPUT_BUILD_FOLDER\" && make debug -j8 && echo "Done\n"
+    windows:Gainput.commands = echo "Building Gainput Library..." && cd \"$$GAINPUT_BUILD_FOLDER\" && jom debug -j8 && echo "Done\n"
 } else {
-    Gainput.commands = echo "Building Gainput Library..." && cd \"$$GAINPUT_BUILD_FOLDER\" && make release -j8 && echo "Done\n"
+    unix:Gainput.commands = echo "Building Gainput Library..." && cd \"$$GAINPUT_BUILD_FOLDER\" && make release -j8 && echo "Done\n"
+    windows:Gainput.commands = echo "Building Gainput Library..." && cd \"$$GAINPUT_BUILD_FOLDER\" && jom release -j8 && echo "Done\n"
 }
 Gainput.depends = $$GAINPUT_BUILD_FOLDER/Makefile
 QMAKE_EXTRA_TARGETS += Gainput
-PRE_TARGETDEPS += $$GAINPUT_BUILT/libGainput.a
+unix:PRE_TARGETDEPS += $$GAINPUT_BUILT/libGainput.a
+windows:PRE_TARGETDEPS += $$GAINPUT_BUILT/Gainput.lib

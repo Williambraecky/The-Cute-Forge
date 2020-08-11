@@ -20,16 +20,20 @@ CONFIG(debug, debug|release) {
     GAINPUT_BUILT = $$GAINPUT_BUILD_FOLDER/release
 }
 
-TheForgeLib.target = $$THE_FORGE_BUILT/libTheForge.a
+unix:TheForgeLib.target = $$THE_FORGE_BUILT/libTheForge.a
+windows:TheForgeLib.target = $$THE_FORGE_BUILT/TheForge.lib
 CONFIG(debug, debug|release) {
-    TheForgeLib.commands = echo "Building The Forge Library..." && cd \"$$THEFORGE_BUILD_FOLDER\" && make debug -j8 && echo "Done\n"
+    unix:TheForgeLib.commands = echo "Building The Forge Library..." && cd \"$$THEFORGE_BUILD_FOLDER\" && make debug -j8 && echo "Done\n"
+    windows:TheForgeLib.commands = echo "Building The Forge Library..." && cd \"$$THEFORGE_BUILD_FOLDER\" && jom debug -j8 && echo "Done\n"
 } else {
-    TheForgeLib.commands = echo "Building The Forge Library..." && cd \"$$THEFORGE_BUILD_FOLDER\" && make release -j8 && echo "Done\n"
+    unix:TheForgeLib.commands = echo "Building The Forge Library..." && cd \"$$THEFORGE_BUILD_FOLDER\" && make release -j8 && echo "Done\n"
+    windows:TheForgeLib.commands = echo "Building The Forge Library..." && cd \"$$THEFORGE_BUILD_FOLDER\" && jom release -j8 && echo "Done\n"
 }
 TheForgeLib.depends = $$THEFORGE_BUILD_FOLDER/Makefile
 
 QMAKE_EXTRA_TARGETS += TheForgeLib
-PRE_TARGETDEPS += $$THE_FORGE_BUILT/libTheForge.a
+unix:PRE_TARGETDEPS += $$THE_FORGE_BUILT/libTheForge.a
+windows:PRE_TARGETDEPS += $$THE_FORGE_BUILT/TheForge.lib
 
 LIBS += -L$$THE_FORGE_BUILT -lTheForge -L$$GAINPUT_BUILT -lGainput
 
