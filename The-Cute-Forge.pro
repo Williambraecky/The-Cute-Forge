@@ -3,11 +3,11 @@ CONFIG -= qt
 TEMPLATE = lib
 CONFIG += staticlib
 
-CONFIG += c++11
+CONFIG += c++14
 
 # Ignore annoying warnings
 mac {
-    QMAKE_CXXFLAGS_WARN_ON += -Wno-ignored-qualifiers -Wno-unused-parameter
+    QMAKE_CXXFLAGS_WARN_ON += -Wno-ignored-qualifiers -Wno-unused-parameter -Wno-c++14-extensions
 }
 
 TARGET = TheForge
