@@ -71,3 +71,6 @@ Tools/ShaderBuildCommand/packages/
 **/*.pro.user*
 **/.qmake.stash
 **/build-*
+
+# Build folder
+Build/
